@@ -13,7 +13,7 @@ export default function ShipList() {
   }, [setShipList]);
   return (
     <>
-      <h1>Star wars ship</h1>
+      <h1>Star wars ships</h1>
 
       <ul>
         {shipList?.map((ship) => (
