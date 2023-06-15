@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ShipListItem from "./ShipListItem";
 
 export default function ShipList() {
   const [shipList, setShipList] = useState([]);
@@ -16,8 +17,13 @@ export default function ShipList() {
       <h1>Star wars ships</h1>
 
       <ul>
+        <ShipListItem />
         {shipList?.map((ship) => (
-          <li key={ship.name}>{ship.name}</li>
+          <>
+            <li key={ship.name}>Name: {ship.name}</li>
+            <li key={ship.manufacturer}>Manufacturer: {ship.manufacturer}</li>
+            <li key={ship.cost}>Cost: {ship.cost_in_credits}</li>
+          </>
         ))}
       </ul>
     </>
